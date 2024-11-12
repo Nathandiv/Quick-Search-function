@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ FormsModule,CommonModule,BrowserModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -22,6 +25,7 @@ export class HomeComponent implements OnInit {
   { id: 20, name: 'Ms Carter', country: 'CA' }
   ]
 
+  constructor(){}
 
   ngOnInit(): void {
     
