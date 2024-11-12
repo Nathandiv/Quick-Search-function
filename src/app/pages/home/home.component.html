@@ -1,5 +1,24 @@
 <div class="container">
     <div class="row">
-        
+        <div class="search-hero">
+            <input type="text" name="search"  [([(ngModel)]="searchText")] placeholder="search by hero,id or country ">
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Hero Name</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroes  | filter:searchText" >
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
